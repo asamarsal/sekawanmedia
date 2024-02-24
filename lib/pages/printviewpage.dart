@@ -164,7 +164,7 @@ class _PrintviewPageState extends State<PrintviewPage> {
                   alignment: Alignment.topLeft,
                   child: GestureDetector(
                     onTap: () async {
-                      PageRouteTransition.effect = TransitionEffect.bottomToTop;
+                      PageRouteTransition.effect = TransitionEffect.leftToRight;
                       Navigator.pop(context);
                     },
                     child: Container(

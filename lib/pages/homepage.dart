@@ -385,10 +385,11 @@ class _HomePageState extends State<HomePage> {
                             setState(() {
                               jwtData = newData;
                             });
-
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => PrintviewPage()),
+                            showTopSnackBar(
+                              Overlay.of(context),
+                              const CustomSnackBar.success(
+                                message: "Berhasil",
+                              ),
                             );
                           } else {
                             // Jika tidak ada data, tampilkan pesan error
