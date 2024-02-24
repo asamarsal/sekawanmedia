@@ -246,7 +246,14 @@ class _ProfilePageState extends State<ProfilePage> {
                                 ],
                               ),
                             ),
-                            child: Icon(Icons.facebook, color: Colors.black, size: 25.0),
+                            child: Transform.scale(
+                              scale: 0.75,
+                              child: const ImageIcon(
+                                AssetImage('assets/icons/logo_gitbook.png'),
+                                color: Colors.black,
+                                size: 5.0,
+                              ),
+                            )
                           ),
                         ),
                         SizedBox(width: 10,),

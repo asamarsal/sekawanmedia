@@ -204,11 +204,12 @@ class _HomePageState extends State<HomePage> {
               ),
               child: Column(
                 children: [
-                  SizedBox(height: 5.0,),
+                  SizedBox(height: 10.0,),
                   const Text(
                     "Sekawan Media Technical Test",
                     style: TextStyle(fontSize: 20.0, color: Colors.black, fontWeight: FontWeight.w400),
                   ),
+                  SizedBox(height: 5.0,),
                   //Date Controller
                   Padding(padding: EdgeInsets.only(left: 20, right: 20, top: 5),
                     child: Container(
@@ -384,11 +385,10 @@ class _HomePageState extends State<HomePage> {
                             setState(() {
                               jwtData = newData;
                             });
-                            showTopSnackBar(
-                              Overlay.of(context),
-                              const CustomSnackBar.success(
-                                message: "Data diambil",
-                              ),
+
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => PrintviewPage()),
                             );
                           } else {
                             // Jika tidak ada data, tampilkan pesan error
