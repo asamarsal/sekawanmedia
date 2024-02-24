@@ -46,7 +46,7 @@ class _GithubPage extends State<GithubPage> {
           },
         ),
       )
-      ..loadRequest(Uri.parse('https://github.com/asamarsal'));
+      ..loadRequest(Uri.parse('https://s.id/profilasamarsal'));
 
   }
 

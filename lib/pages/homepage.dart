@@ -9,7 +9,7 @@ import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';
 import 'package:page_route_transition/page_route_transition.dart';
 import 'package:sekawanmedia/pages/printviewpage.dart';
-import 'package:sekawanmedia/pages/profilepage.dart';
+import 'package:sekawanmedia/pages/profilenewpage.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:top_snackbar_flutter/custom_snack_bar.dart';
