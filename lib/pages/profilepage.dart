@@ -18,32 +18,39 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
 
-  final Uri _urlinstagramsgn = Uri.parse('https://www.instagram.com/asamarsal/');
-  final Uri _urlfacebooksgn = Uri.parse('https://www.facebook.com/people/Sinergi-Gula-Nusantara/100086951187087/');
-  final Uri _urlyoutubesgn = Uri.parse('https://www.youtube.com/@sinergigulanusantara');
-  final Uri _urllinkedinsgn = Uri.parse('https://www.linkedin.com/in/asamarsal');
+  final Uri _urlinstagramasa = Uri.parse('https://www.instagram.com/asamarsal/');
+  final Uri _urlfacebookasa = Uri.parse('https://asamarsal.gitbook.io/notes/');
+  final Uri _urlyoutubeasa = Uri.parse('https://www.youtube.com/channel/UClqybM4UxI5B6KBkp7Xqu2g');
+  final Uri _urllinkedinasa = Uri.parse('https://www.linkedin.com/in/asamarsal');
+  final Uri _urlgithubasa = Uri.parse('ehance.net/asamarsal');
 
-  Future<void> _launchUrlinstagramsgn() async {
-    if (!await launchUrl(_urlinstagramsgn)) {
-      throw Exception('Could not launch $_urlinstagramsgn');
+  Future<void> _launchUrlinstagramasa() async {
+    if (!await launchUrl(_urlinstagramasa)) {
+      throw Exception('Could not launch $_urlinstagramasa');
     }
   }
 
-  Future<void> _launchUrlfacebooksgn() async {
-    if (!await launchUrl(_urlfacebooksgn)) {
-      throw Exception('Could not launch $_urlfacebooksgn');
+  Future<void> _launchUrlfacebookasa() async {
+    if (!await launchUrl(_urlfacebookasa)) {
+      throw Exception('Could not launch $_urlfacebookasa');
     }
   }
 
-  Future<void> _launchUrllinkedinsgn() async {
-    if (!await launchUrl(_urllinkedinsgn)) {
-      throw Exception('Could not launch $_urllinkedinsgn');
+  Future<void> _launchUrlgithubasa() async {
+    if (!await launchUrl(_urlgithubasa)) {
+      throw Exception('Could not launch $_urlgithubasa');
     }
   }
 
-  Future<void> _launchUrlyoutubesgn() async {
-    if (!await launchUrl(_urlyoutubesgn)) {
-      throw Exception('Could not launch $_urlyoutubesgn');
+  Future<void> _launchUrllinkedinasa() async {
+    if (!await launchUrl(_urllinkedinasa)) {
+      throw Exception('Could not launch $_urllinkedinasa');
+    }
+  }
+
+  Future<void> _launchUrlyoutubeasa() async {
+    if (!await launchUrl(_urlyoutubeasa)) {
+      throw Exception('Could not launch $_urlyoutubeasa');
     }
   }
 
@@ -179,7 +186,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       children: [
                         //Instagram
                         InkWell(
-                          onTap: _launchUrlinstagramsgn,
+                          onTap: _launchUrlinstagramasa,
                           child: Container(
                             height: 50,
                             width: 50,
@@ -214,7 +221,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         SizedBox(width: 10,),
                         //Facebook
                         InkWell(
-                          onTap: _launchUrlfacebooksgn,
+                          onTap: _launchUrlfacebookasa,
                           child : Container(
                             height: 50,
                             width: 50,
@@ -245,7 +252,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         SizedBox(width: 10,),
                         //Linked In
                         InkWell(
-                          onTap: _launchUrllinkedinsgn,
+                          onTap: _launchUrllinkedinasa,
                           child : Container(
                             height: 50,
                             width: 50,
@@ -281,7 +288,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         SizedBox(width: 10,),
                         //Youtube
                         InkWell(
-                          onTap: _launchUrlyoutubesgn,
+                          onTap: _launchUrlyoutubeasa,
                           child : Container(
                             height: 50,
                             width: 50,
@@ -398,9 +405,44 @@ class _ProfilePageState extends State<ProfilePage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        //Github
+                        InkWell(
+                          onTap: _launchUrlgithubasa,
+                          child: Container(
+                            height: 50,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Colors.black12,
+                              ),
+                              shape: BoxShape.circle,
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color(0xFF80000000),
+                                  blurRadius: 5.0,
+                                  offset: Offset(3, 3),
+                                )
+                              ],
+                              gradient: const LinearGradient(
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                                colors: [
+                                  Colors.blue,
+                                  Colors.lightBlueAccent,
+                                ],
+                              ),
+                            ),
+                            child: const ImageIcon(
+                              AssetImage('assets/icons/logo_ig.png'),
+                              color: Colors.black,
+                              size: 5.0,
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 10,),
                         //Instagram
                         InkWell(
-                          onTap: _launchUrlinstagramsgn,
+                          onTap: _launchUrlinstagramasa,
                           child: Container(
                             height: 50,
                             width: 50,
@@ -435,7 +477,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         SizedBox(width: 10,),
                         //Facebook
                         InkWell(
-                          onTap: _launchUrlfacebooksgn,
+                          onTap: _launchUrlfacebookasa,
                           child : Container(
                             height: 50,
                             width: 50,
@@ -460,13 +502,19 @@ class _ProfilePageState extends State<ProfilePage> {
                                 ],
                               ),
                             ),
-                            child: Icon(Icons.facebook, color: Colors.black, size: 25.0),
+                            child: Transform.scale(
+                              scale: 0.75,
+                              child: const ImageIcon(
+                                AssetImage('assets/icons/logo_gitbook.png'),
+                                color: Colors.black,
+                              ),
+                            ),
                           ),
                         ),
                         SizedBox(width: 10,),
                         //Linked In
                         InkWell(
-                          onTap: _launchUrllinkedinsgn,
+                          onTap: _launchUrllinkedinasa,
                           child : Container(
                             height: 50,
                             width: 50,
@@ -502,7 +550,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         SizedBox(width: 10,),
                         //Youtube
                         InkWell(
-                          onTap: _launchUrlyoutubesgn,
+                          onTap: _launchUrlyoutubeasa,
                           child : Container(
                             height: 50,
                             width: 50,

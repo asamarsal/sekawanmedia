@@ -86,8 +86,11 @@ flutter:
     - assets/animations/splashscreenanimation.json
     - assets/icons/iconsekawan.png
     - assets/icons/logo_ig.png
+    - assets/icons/icon_github.png
+    - assets/icons/logo_gitbook.png
     - assets/icons/logo_youtube.png
     - assets/icons/logo_linkedin.png
+    - assets/animations/animasidefault.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
